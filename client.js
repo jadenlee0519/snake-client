@@ -8,13 +8,17 @@ const connect = function () {
   });
   
   // interpret incoming data as text
-  
   conn.setEncoding("utf8");
+
   conn.on("connect", () => {
     console.log("You are in")
     conn.write("Name: LSS")
+    // conn.write("Move: up");
   });
 
+  conn.on("connect", () => {
+
+  });
 
   return conn;
 };
